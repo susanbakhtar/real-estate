@@ -210,14 +210,31 @@ figure {
 }
 
 /* Add these lines for Safari compatibility */
-.img-section figure::-webkit-scrollbar-track {
+.img-section figure {
+  overflow-y: scroll;
+}
+
+.img-section figure::-webkit-scrollbar {
+  background-color: transparent;
+  width: 0.3rem;
+}
+
+.img-section figure::-webkit-scrollbar-thumb {
+  background-color: #6ec374;
   -webkit-border-radius: 10px;
   border-radius: 10px;
 }
 
-.img-section figure::-webkit-scrollbar-thumb {
-  -webkit-border-radius: 10px;
-  border-radius: 10px;
+@supports (-webkit-scrollbar-thumb: initial) {
+  .img-section figure::-webkit-scrollbar-track {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
+
+  .img-section figure::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+  }
 }
 
 .img-section figure img {
