@@ -209,6 +209,17 @@ figure {
   background-color: #6ec374;
 }
 
+/* Add these lines for Safari compatibility */
+.img-section figure::-webkit-scrollbar-track {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
+.img-section figure::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+
 .img-section figure img {
   width: 100%;
   height: 100%;
